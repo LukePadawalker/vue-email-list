@@ -7,6 +7,7 @@ const endpoint = "https://flynn.boolean.careers/exercises/api/random/mail";
 const app = createApp({
     data: () => ({
         mails: [],
+        results: false
 
     }),
 
@@ -14,7 +15,7 @@ const app = createApp({
         for(let i = 0; i < 10; i++){
             axios.get(endpoint).then(res => {
                 this.mails.push(res.data.response)
-                console.log(this.mail)
+                console.log(this.mails)
             })
         }
     }

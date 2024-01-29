@@ -16,9 +16,15 @@
 </head>
 <body>
     <div id="root">
-        <ul v-for="mail in mails">
-            <li>{{mail}}</li>
-        </ul>
+        <div v-if="mails.length === 10">
+            <ul v-for="mail in mails">
+                <li>{{mail}}</li>
+            </ul>
+        </div>
+        <div v-else>
+            <p>Loading...</p>
+        </div>
+
 
     </div>
     
